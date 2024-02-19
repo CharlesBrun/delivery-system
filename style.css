@@ -1,0 +1,40 @@
+:root {
+    --cor-primaria: #D04848;
+    --cor-secundaria: #F3B95F;
+    --cor-destaque: #FDE767;
+    --cor-auxiliar: #6895D2;
+  }
+  
+
+body{
+    background-color: var(--cor-primaria) !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background-color {
+    background-color: var(--cor-auxiliar);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.px-10 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.py-10 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.fullscreen-image {
+    height: 100vh;
+    width: 50%;
+    object-fit: cover;
+  }
