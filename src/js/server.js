@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '')));
 
 // Rota para a página de login
-app.get('/login', (req, res) => {
-    res.redirect('/index.html');
+app.get('', (req, res) => {
+    res.redirect('index.html');
 });
 
 // Rota para processar o login
