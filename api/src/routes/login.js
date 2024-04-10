@@ -7,7 +7,8 @@ const secretKey = 'CjkTyB9MIZhhc4mcVYJK8eYiW1lIPg18';
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1];
+  const token = authHeader && authHeader.split(' ')[0];
+
   if (!token) {
       return res.status(401).json({ error: 'Token não fornecido' });
   }
@@ -23,6 +24,6 @@ function authenticateToken(req, res, next) {
 
 router
   .post("/login", LoginController.login)
-  .get("/protegido",authenticateToken , LoginController.protegido)
+  .get("/protegido", authenticateToken, LoginController.protegido)
 
 export default router;   
